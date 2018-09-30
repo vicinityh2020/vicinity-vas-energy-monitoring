@@ -21,6 +21,8 @@ With pipenv activated, inside the project folder.
 
 # API
 
+Intended for communitcation between front and back end.
+
 ## [*GET*] Usage data 
 URL: `api/<water||power>/usage/<day||month>/<unix_timestamp>`
 
