@@ -65,7 +65,7 @@ URL: `api/appliance/`
     {
         "id": "12341dsa12dq",
         "name": "Appliance name",
-        "type": "Appliance type"
+        "type": "Appliance type",
         "data": {
             "value": 123,
             "unit": "C",
