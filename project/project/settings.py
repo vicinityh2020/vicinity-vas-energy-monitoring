@@ -26,7 +26,7 @@ SECRET_KEY = '2u%!%etpx+ub^@91hv_gkm+)m7vuq536k1c)##qv0qdvzp&t2o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 # Application definition
 
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
     'adapter',
     'application',
 ]
@@ -85,10 +86,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'VAS-TINYM-2',
-        'USER': 'postgres',
+        'USER': 'vicinity',
         'PASSWORD': '123456',
         'HOST': 'localhost',
-        'PORT': '',
+        'PORT': '5432',
     }
 }
 

@@ -3,8 +3,10 @@ from django.http import JsonResponse
 
 # Create your views here.
 from application.models import SensorUsage
+from django.views.decorators.csrf import csrf_exempt
 
 
+@csrf_exempt
 def water_usage(request, **kwargs):
     response_obj = {
         "units": "l",
@@ -42,7 +44,7 @@ def water_usage(request, **kwargs):
         "Error": "Unknown error"
     })
 
-
+@csrf_exempt
 def energy_usage(request, **kwargs):
     response_obj = {
         "units": "l",
