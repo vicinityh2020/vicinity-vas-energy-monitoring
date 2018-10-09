@@ -5,4 +5,5 @@ from application import views
 
 urlpatterns = [
     path('water/usage/<period>/<int:timestamp>', views.water_usage),
+    path('water/threshold', views.water_threshold),
 ]

@@ -1,10 +1,24 @@
+import json
+
 import pendulum
 from django.http import JsonResponse
 
 # Create your views here.
-from application.models import SensorUsage
+from application.models import SensorUsage, Settings
 from django.views.decorators.csrf import csrf_exempt
 
+
+def water_threshold(request):
+    response_obj = {
+        'value': None
+    }
+
+    setting_name = 'WaterThreshold'
+
+    threshold = Settings.get_threshold_value(setting_name=setting_name)
+    response_obj['value'] = threshold.value
+
+    return JsonResponse(status=200, data=response_obj)
 
 @csrf_exempt
 def water_usage(request, **kwargs):
