@@ -1,7 +1,5 @@
 from django.db import models
-
 from adapter import models as adapter_models
-
 
 class SensorUsage(models.Model):
     value = models.FloatField()

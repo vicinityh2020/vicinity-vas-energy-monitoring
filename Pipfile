@@ -12,6 +12,7 @@ django-cors-headers = "*"
 pendulum = "*"
 celery = "*"
 redis = "*"
+django-rest-knox = "*"
 
 [dev-packages]
 

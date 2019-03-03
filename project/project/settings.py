@@ -37,9 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'corsheaders',
     'adapter',
     'application',
+    'knox'
 ]
 
 MIDDLEWARE = [
@@ -146,6 +148,10 @@ THING_DESCRIPTION = {
             'events': []
         }
     ]
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': ('knox.auth.TokenAuthentication',),
 }
 
 
